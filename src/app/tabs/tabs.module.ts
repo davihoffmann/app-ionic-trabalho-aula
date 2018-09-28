@@ -1,3 +1,4 @@
+import { PessoaPageModule } from './../pessoa/pessoa.module';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { TabsPage } from './tabs.page';
 import { ContactPageModule } from '../contact/contact.module';
 import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
+import { LoginPageModule } from '../login/login.module';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { HomePageModule } from '../home/home.module';
     TabsPageRoutingModule,
     HomePageModule,
     AboutPageModule,
-    ContactPageModule
+    ContactPageModule,
+    PessoaPageModule,
+    LoginPageModule
   ],
   declarations: [TabsPage]
 })

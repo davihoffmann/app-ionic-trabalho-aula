@@ -5,6 +5,8 @@ import { TabsPage } from './tabs.page';
 import { HomePage } from '../home/home.page';
 import { AboutPage } from '../about/about.page';
 import { ContactPage } from '../contact/contact.page';
+import { PessoaPage } from '../pessoa/pessoa.page';
+import { LoginPage } from '../login/login.page';
 
 const routes: Routes = [
   {
@@ -13,18 +15,18 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/tabs/(home:home)',
+        redirectTo: '/login/(login:login)',
         pathMatch: 'full',
       },
       {
-        path: 'home',
-        outlet: 'home',
-        component: HomePage
+        path: 'pessoa',
+        outlet: 'pessoa',
+        component: PessoaPage
       },
       {
-        path: 'about',
-        outlet: 'about',
-        component: AboutPage
+        path: 'login',
+        outlet: 'login',
+        component: LoginPage
       },
       {
         path: 'contact',
@@ -35,7 +37,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/(home:home)',
+    redirectTo: '/tabs/(login:login)',
     pathMatch: 'full'
   }
 ];

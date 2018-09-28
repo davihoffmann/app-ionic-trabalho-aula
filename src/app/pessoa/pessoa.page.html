@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Pessoa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let pessoa of data" (click)="showPessoaDetail(pessoa.id)">
+    <ion-card-header>
+      <ion-card-title>{{pessoa.nome}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
